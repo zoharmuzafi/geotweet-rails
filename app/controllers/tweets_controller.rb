@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
   def index
+    helpers.stream()
   end
 
   def new
