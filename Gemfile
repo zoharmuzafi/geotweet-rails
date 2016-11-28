@@ -25,6 +25,9 @@ gem 'dotenv-rails'
 gem 'tweetstream'
 # serach in text gem
 gem 'mongoid_search'
+
+# pagination
+gem "will_paginate_mongoid"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

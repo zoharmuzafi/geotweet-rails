@@ -30,7 +30,7 @@ $(document).ready(function() {
 			$('#list').empty();
 			for(i=0; i<data.data.length;i++){
 				$('#list').append('<li>' + data.data[i].text + ' ' +data.data[i].created_at + '</li>');
-			}
+			}			
 		});
 	});
 });
