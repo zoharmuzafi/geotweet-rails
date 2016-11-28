@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'dotenv-rails'
 # twitter gem
 gem 'tweetstream'
+# serach in text gem
+gem 'mongoid_search'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

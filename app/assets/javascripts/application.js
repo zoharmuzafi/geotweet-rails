@@ -17,12 +17,16 @@
 
 $(document).ready(function() {
 	console.log('ready');
+	// form submit event
 	$('form').on('submit', function(event){
 		event.preventDefault();
+		// values for the search ajax call 
 		var lon = $('#lon').val();
 		var lat = $('#lat').val();
 		var distance = $('#distance').val();
-		$.get("/search", { lon: lon, lat: lat, distance: distance }, function(data){
+		var term = $('#term').val();
+		// search ajax call 
+		$.get("/search", { lon: lon, lat: lat, distance: distance, term: term }, function(data){
 			$('#list').empty();
 			for(i=0; i<data.data.length;i++){
 				$('#list').append('<li>' + data.data[i].text + ' ' +data.data[i].created_at + '</li>');
