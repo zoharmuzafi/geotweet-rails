@@ -7,7 +7,8 @@ class TweetsController < ApplicationController
   def search
     lon = params[:lon]
     lat = params[:lat]
-    @tweets = Tweet.limit(10)
+    @tweets = Tweet.all
     render :json => { data: @tweets }
   end
 end
+

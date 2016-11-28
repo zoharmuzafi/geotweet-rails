@@ -1,10 +1,10 @@
 <h1>Tweets#index</h1>
 <p>Find me in app/views/tweets/index.html.erb</p>
 <%= form_tag("/search", method: "get", remote: true) do %>
-  <%= label_tag(:lon, "Search for:") %>
-  <%= text_field_tag(:lon) %>
 	<%= label_tag(:lat, "Search for:") %>
   <%= text_field_tag(:lat) %>
+  <%= label_tag(:lon, "Search for:") %>
+  <%= text_field_tag(:lon) %>
   <%= submit_tag("Search") %>
 <% end %>
 <div id='list'>
