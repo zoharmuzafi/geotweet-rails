@@ -21,11 +21,11 @@ $(document).ready(function() {
 		event.preventDefault();
 		var lon = $('#lon').val();
 		var lat = $('#lat').val();
-		$.get("/search", { lon: lon, lat: lat }, function(data){
+		var distance = $('#distance').val();
+		$.get("/search", { lon: lon, lat: lat, distance: distance }, function(data){
 			$('#list').empty();
 			for(i=0; i<data.data.length;i++){
-				console.log(data.data[i].text);
-				$('#list').append('<li>' + data.data[i].text + '</li>');
+				$('#list').append('<li>' + data.data[i].text + ' ' +data.data[i].created_at + '</li>');
 			}
 		});
 	});

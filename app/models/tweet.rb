@@ -4,5 +4,5 @@ class Tweet
   field :created_at, :type => DateTime
   field :location, type: Array
   
-	index({ location: "2dsphere" }, { min: -200, max: 200 })
+	index({ location: "2dsphere" }, { min: -180, max: 180 })
 end
